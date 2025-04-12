@@ -1,0 +1,97 @@
+<!-- <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="#">Logo</a>
+      </div>
+      
+      <div class="navbar-toggle"  [ngClass]="{'active': isMenuOpen}" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      
+      <ul class="navbar-menu" [ngClass]="{'active': isMenuOpen}">
+        <li class="navbar-item">
+          <a routerLink="/home" class="navbar-link">Accueil</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Services</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">À propos</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Contact</a>
+        </li>
+        <li class="navbar-item navbar-btn">
+          <a href="#" class="button">S'inscrire</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  -->
+
+
+  <nav class="navbar" [class.navbar-mobile-open]="isMobileMenuOpen">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="#">
+          <div class="logo-circle">
+            <span>Logo</span>
+          </div>
+        </a>
+      </div>
+  
+      <button class="navbar-toggle"  [ngClass]="{'active': isMobileMenuOpen}" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+  
+      <div class="navbar-menu" [class.active]="isMobileMenuOpen">
+        <ul class="navbar-links">
+          <li class="navbar-item active"  title="Accueil">
+            <a href="#" class="navbar-link"  >Accueil</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">À propos</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Services</a>
+          </li>
+          <li class="navbar-item dropdown">
+            <a href="#" class="navbar-link">
+              Portfolio
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-icon">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Projet 1</a>
+              <a href="#" class="dropdown-item">Projet 2</a>
+              <a href="#" class="dropdown-item">Projet 3</a>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Offres</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Blog</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Contact</a>
+          </li>
+        </ul>
+  
+        <div class="navbar-actions">
+          <div class="language-selector">
+            <span class="flag">🇬🇧</span>
+            <span class="lang-code">EN</span>
+          </div>
+          <a href="#" class="cta-button">Travaillons ensemble</a>
+        </div>
+      </div>
+    </div>
+  </nav>
